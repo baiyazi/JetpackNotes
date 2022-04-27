@@ -1,0 +1,48 @@
+{
+  "title": "Jetpack",
+  "author": "梦否",
+  "description": "This is such a great book!",
+  "language": "zh-hans",
+  "direction": "rtl",
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-plus",
+    "popup",
+    "splitter",
+    "code",
+    "chapter-fold",
+    "tbfed-pagefooter",
+    "splitter",
+    "theme-comscore",
+    "github-buttons"
+  ],
+  "pluginsConfig": {
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy 梦否 2022",
+      "modify_label": "最后更新时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "theme-default": {
+      "showLevel": true
+    },
+    "github-buttons": {
+      "repo": "zhangjikai/gitbook-use",
+      "types": ["star", "watch", "fork"],
+      "size": "small"
+    }
+  },
+  "links": {
+    "sidebar": {
+      "我的CSDN博客": "https://mengfou.blog.csdn.net/",
+      "我的Github": "https://github.com/baiyazi"
+    }
+  }
+}
