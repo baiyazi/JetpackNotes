@@ -1,5 +1,7 @@
 # Introduction
 
+文档阅读地址：https://baiyazi.github.io/JetpackNotes
+
 * [【Android Jetpack】LifeCycle](Jetpack之LifeCycle.md)
 * [数据存储](数据存储.md)
 	* [DataStore](DataStore.md)
