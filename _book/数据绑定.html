@@ -1,0 +1,1040 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据绑定 · Jetpack</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="梦否">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="【AndroidJetpack】Room.html" />
+    
+    
+    <link rel="prev" href="视图绑定.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhangjikai/gitbook-use","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mengfou.blog.csdn.net/" target="_blank" class="custom-link">我的CSDN博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/baiyazi" target="_blank" class="custom-link">我的Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Jetpack之LifeCycle.html">
+            
+                <a href="Jetpack之LifeCycle.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    【Android Jetpack】LifeCycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="数据存储.md">
+            
+                <span>
+            
+                    
+                        <b>1.3.</b>
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="DataStore.html">
+            
+                <a href="DataStore.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    DataStore
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="视图绑定.html">
+            
+                <a href="视图绑定.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    视图绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="数据绑定.html">
+            
+                <a href="数据绑定.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    数据绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="【AndroidJetpack】Room.html">
+            
+                <a href="【AndroidJetpack】Room.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    【Android Jetpack】Room——基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Livedata.html">
+            
+                <a href="Livedata.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    【Android Jetpack】Livedata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="【AndroidJetpack】Room+ViewModel+LiveData.html">
+            
+                <a href="【AndroidJetpack】Room+ViewModel+LiveData.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    【Android Jetpack】Room+ViewModel+LiveData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="【AndroidJetpack】Room——其余.html">
+            
+                <a href="【AndroidJetpack】Room——其余.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    【Android Jetpack】Room——其余
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="【AndroidJetpack】Room——对象之间的关系.html">
+            
+                <a href="【AndroidJetpack】Room——对象之间的关系.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    【Android Jetpack】Room——多表之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数据绑定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<h1 id="1-&#x8BF4;&#x660E;">1. &#x8BF4;&#x660E;</h1>
+<blockquote>
+<p>&#x672C;&#x7BC7;&#x535A;&#x5BA2;&#x53C2;&#x8003;<a href="https://developer.android.google.cn/codelabs/android-databinding?hl=en#0" target="_blank">Data Binding in Android (google.cn)</a> &#x548C; <a href="https://developer.android.google.cn/topic/libraries/data-binding" target="_blank">&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x5E93;</a></p>
+</blockquote>
+<p>&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x58F0;&#x660E;&#x6027;&#x683C;&#x5F0F;&#xFF08;&#x800C;&#x975E;&#x7A0B;&#x5E8F;&#x5316;&#x5730;&#xFF09;&#x5C06;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x754C;&#x9762;&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x5230;&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6E90;&#x3002;&#x5176;&#x5B9E;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x4E8E;<code>MVVM</code>&#x6846;&#x67B6;&#xFF0C;&#x6570;&#x636E;&#x548C;&#x663E;&#x793A;&#x7684;&#x90E8;&#x5206;&#x52A8;&#x6001;&#x7ED1;&#x5B9A;&#xFF0C;<strong>&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x5BF9;&#x5E94;&#x7684;&#x89C6;&#x56FE;&#x4E5F;&#x968F;&#x4E4B;&#x6539;&#x53D8;</strong>&#x3002;&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x53D6;&#x4EE3;<code>findViewById()</code>&#x8C03;&#x7528;&#xFF0C;&#x8BF7;&#x8003;&#x8651;&#x6539;&#x7528;&#x89C6;&#x56FE;&#x7ED1;&#x5B9A;&#x3002;&#x5176;&#x6A21;&#x5F0F;&#x793A;&#x610F;&#x56FE;&#xFF1A;
+<img src="images/screenshot_1648541584467.png" alt=""></p>
+<p>&#x548C;&#x89C6;&#x56FE;&#x7ED1;&#x5B9A;&#x7C7B;&#x4F3C;&#xFF0C;&#x5BF9;&#x4E8E;<code>Android Studio</code>&#x7684;&#x7248;&#x672C;&#x4E5F;&#x6709;&#x8981;&#x6C42;&#xFF1A;</p>
+<blockquote>
+<p>  Android Studio 3.4 or greater</p>
+</blockquote>
+<h1 id="2-&#x4F7F;&#x7528;">2. &#x4F7F;&#x7528;</h1>
+<h2 id="21-&#x73AF;&#x5883;&#x51C6;&#x5907;">2.1 &#x73AF;&#x5883;&#x51C6;&#x5907;</h2>
+<p>&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#xFF1A;</p>
+<pre><code>android {
+    ...
+    dataBinding {
+        enabled = true
+    }
+}
+</code></pre><p>&#x5C06;&#x4E4B;&#x524D;&#x7684;<code>layout</code>&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A;<code>DataBinding layout</code>&#x3002;&#x76F4;&#x63A5;&#x53F3;&#x51FB;&#x6839;&#x5E03;&#x5C40;&#x7684;&#x6807;&#x7B7E;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;<strong>Show Context Actions</strong>&#xFF1A;
+<img src="images/screenshot_1648544090722.png" alt="">
+&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x63D0;&#x4F9B;&#x4E86;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x5230;<code>data binding</code>&#x5E03;&#x5C40;&#x7684;&#x9009;&#x9879;&#xFF1A;
+<img src="images/screenshot_1648544138755.png" alt="">
+&#x6BD4;&#x5982;&#x6211;&#x8FD9;&#x91CC;&#x8F6C;&#x6362;&#x540E;&#x7684;<code>xml</code>&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">tools:context</span>=<span class="hljs-string">&quot;.MainActivity&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/textView&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;&#x5185;&#x5BB9;&quot;</span>
+            <span class="hljs-attr">android:textSize</span>=<span class="hljs-string">&quot;24sp&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">&quot;0.498&quot;</span>
+            <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintRight_toRightOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintVertical_bias</span>=<span class="hljs-string">&quot;0.194&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x5728;<code>data</code>&#x6807;&#x7B7E;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x7684;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>&lt;data&gt;
+    &lt;import type=&quot;android.view.View&quot;/&gt;
+    &lt;variable name=&quot;name&quot; type=&quot;String&quot;/&gt;
+    &lt;variable name=&quot;message&quot; type=&quot;String&quot;/&gt;
+&lt;/data&gt;
+</code></pre><p>&#x56E0;&#x4E3A;&#x540E;&#x7EED;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>View</code>&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x5305;&#x3002;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x5BFC;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x5305;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="22-&#x6839;&#x636E;name&#x957F;&#x5EA6;&#x663E;&#x793A;message&#x6848;&#x4F8B;">2.2 &#x6839;&#x636E;name&#x957F;&#x5EA6;&#x663E;&#x793A;Message&#x6848;&#x4F8B;</h2>
+<p>&#x5C06;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x63A7;&#x4EF6;&#x5173;&#x8054;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x3002;&#x5728;<code>Android Jetpack</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x4E3A;<code>@{ expression }</code>&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>&lt;TextView
+    android:id=&quot;@+id/textView&quot;
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:text=&quot;@{ message }&quot;
+    android:visibility=&quot;@{ (name.length &gt; 3) ? View.VISIBLE : View.GONE }&quot;
+    ...
+/&gt;
+</code></pre><p>&#x7136;&#x540E;&#x5C31;&#x662F;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8BBE;&#x7F6E;&#x5728;<code>xml</code>&#x4E2D;&#x7533;&#x660E;&#x7684;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;&#x548C;<code>viewbinding</code>&#x7C7B;&#x4F3C;&#x5728;<code>databinding</code>&#x4E2D;&#x4E5F;&#x9700;&#x8981;&#x5728;<code>onCreate</code>&#x65B9;&#x6CD5;&#x66FF;&#x6362;&#xFF1A;</p>
+<pre><code>setContentView(R.layout.plain_activity)
+</code></pre><p>&#x8FD9;&#x91CC;&#x66FF;&#x6362;&#x4E3A;&#xFF1A;</p>
+<pre><code>binding = DataBindingUtil.setContentView&lt;ActivityMainBinding&gt;(
+    this,
+    R.layout.activity_main
+)
+</code></pre><p>&#x6240;&#x83B7;&#x5F97;&#x7684;<code>binding</code>&#x5BF9;&#x8C61;&#x4E5F;&#x5C31;&#x662F;&#x548C;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x8054;&#x7684;&#x7C7B;&#xFF0C;&#x5373;&#xFF1A;<code>ActivityMainBinding</code>&#x3002;&#x901A;&#x8FC7;<code>binding</code>&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x5728;<code>xml</code>&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>binding.name = &quot;testDemo&quot;
+binding.message = &quot;Hello data binding.&quot;
+</code></pre><p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>class MainActivity2 : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 1. setContentView(R.layout.plain_activity) replace with below:
+        // data binding
+        binding = DataBindingUtil.setContentView&lt;ActivityMainBinding&gt;(
+            this,
+            R.layout.activity_main
+        )
+
+        // 2. set the variable values
+        binding.name = &quot;testDemo&quot;
+        binding.message = &quot;Hello data binding.&quot;
+    }
+}
+</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;
+<img src="images/screenshot_1648552387108.png" alt=""></p>
+<h2 id="23-&#x54CD;&#x5E94;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;">2.3 &#x54CD;&#x5E94;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;</h2>
+<p>&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;<code>xml</code>&#x4E2D;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x70B9;&#x51FB;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code>android:onClick=&quot;onButtonClick&quot;
+</code></pre><p>&#x7136;&#x540E;&#x5728;<code>Activity</code>&#x4E2D;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;<code>onButtonClick</code>&#x3002;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x6765;&#x6CE8;&#x518C;&#x76D1;&#x542C;&#xFF0C;&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<code>xml</code>&#x4E2D;&#x91C7;&#x7528;<code>Lambda</code>&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6CE8;&#x518C;&#x51FD;&#x6570;&#x3002;&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>SimpleViewModel</code>&#x7C7B;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;<code>ViewModel</code>&#x7C7B;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@author</span> &#x68A6;&#x5426; on 2022/3/29
+ * <span class="hljs-doctag">@blog</span> https://mengfou.blog.csdn.net/
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleViewModel</span>: <span class="hljs-type">ViewModel</span></span>() {
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x6D88;&#x606F;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> message</span> = <span class="hljs-string">&quot;Hello data binding.&quot;</span>
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">if</span>(clickNumber % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-string">&quot;&#x5076;&#x6570;&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;&#x5947;&#x6570;&quot;</span>
+        }
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">set</span> <span class="hljs-comment">// &#x963B;&#x6B62;&#x5916;&#x90E8;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x5185;&#x90E8;&#x4FEE;&#x6539;</span>
+
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> name</span> = <span class="hljs-string">&quot;testDemo&quot;</span>
+
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> clickNumber</span> = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">set</span>
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x70B9;&#x51FB;&#x51FD;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onTextViewClick</span><span class="hljs-params">()</span>{</span>
+        clickNumber++
+        Log.e(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;onTextViewClick: ${clickNumber}&quot;</span> )
+    }
+}
+</code></pre>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5F88;&#x4E0D;&#x5E78;&#xFF0C;&#x70B9;&#x51FB;<code>TextView</code>&#x4E4B;&#x540E;&#xFF0C;&#x5728;<code>TextView</code>&#x4E2D;&#x663E;&#x793A;&#x7684;&#x6587;&#x672C;&#x5E76;&#x6CA1;&#x6709;&#x89C2;&#x6D4B;&#x5230;&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#x3002;&#x89C2;&#x5BDF;&#x65E5;&#x5FD7;&#xFF1A;
+<img src="images/screenshot_1648554617962.png" alt=""></p>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x53EF;&#x89C2;&#x6D4B;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BA9;&#x6570;&#x636E;&#x53EF;&#x4EE5;<strong>observable</strong>&#x624D;&#x884C;&#x3002;&#x4E3A;&#x4E86;&#x8BA9;&#x5B57;&#x6BB5;&#x53EF;&#x89C2;&#x6D4B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>observable</code>&#x7C7B;&#x6216;&#x8005;<code>LiveData</code>&#x3002;&#x5173;&#x4E8E;&#x53EF;&#x89C2;&#x5BDF;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x5728;<code>Google</code>&#x4E2D;&#x6709;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#xFF1A;<a href="https://developer.android.google.cn/topic/libraries/data-binding/observability" target="_blank">&#x4F7F;&#x7528;&#x53EF;&#x89C2;&#x5BDF;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;</a>&#x3002;</p>
+<h2 id="24-&#x53EF;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x7C7B;&#x578B;">2.4 &#x53EF;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<p>&#x53EF;&#x89C2;&#x5BDF;&#x7C7B;&#x6709;&#x4E09;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#xFF1A;&#x5BF9;&#x8C61;&#x3001;&#x5B57;&#x6BB5;&#x548C;&#x96C6;&#x5408;&#x3002;</p>
+<h3 id="241-&#x53EF;&#x89C2;&#x6D4B;&#x5BF9;&#x8C61;">2.4.1 &#x53EF;&#x89C2;&#x6D4B;&#x5BF9;&#x8C61;</h3>
+<p>&#x5B9E;&#x73B0;<code>Observable</code>&#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x5141;&#x8BB8;&#x6CE8;&#x518C;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B83;&#x4EEC;&#x63A5;&#x6536;&#x6709;&#x5173;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x66F4;&#x6539;&#x7684;&#x901A;&#x77E5;&#x3002;&#x4E3A;&#x4FBF;&#x4E8E;&#x5F00;&#x53D1;&#xFF0C;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x76D1;&#x542C;&#x5668;&#x6CE8;&#x518C;&#x673A;&#x5236;&#x7684;<code>BaseObservable</code>&#x7C7B;&#x3002;&#x5B9E;&#x73B0;<code>BaseObservable</code>&#x7684;&#x6570;&#x636E;&#x7C7B;&#x8D1F;&#x8D23;&#x5728;&#x5C5E;&#x6027;&#x66F4;&#x6539;&#x65F6;&#x53D1;&#x51FA;&#x901A;&#x77E5;&#x3002;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x662F;&#x5411; getter &#x5206;&#x914D;<code>Bindable</code>&#x6CE8;&#x91CA;&#xFF0C;&#x7136;&#x540E;&#x5728; setter &#x4E2D;&#x8C03;&#x7528;<code>notifyPropertyChanged()</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="242-&#x53EF;&#x89C2;&#x6D4B;&#x5B57;&#x6BB5;">2.4.2 &#x53EF;&#x89C2;&#x6D4B;&#x5B57;&#x6BB5;</h3>
+<pre><code>ObservableField&lt;String&gt;()
+</code></pre><p>&#x4EE5;&#x53CA;&#x57FA;&#x672C;&#x7684;&#xFF1A;
+<img src="images/screenshot_1648555893015.png" alt=""></p>
+<h3 id="243-&#x53EF;&#x89C2;&#x5BDF;&#x96C6;&#x5408;">2.4.3 &#x53EF;&#x89C2;&#x5BDF;&#x96C6;&#x5408;</h3>
+<p><code>ObservableArrayMap</code>&#x3001;<code>ObservableArrayList</code>&#x7B49;&#x3002;</p>
+<h2 id="25-&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x53EF;&#x89C2;&#x5BDF;">2.5 &#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x53EF;&#x89C2;&#x5BDF;</h2>
+<p>&#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x4E3A;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;<code>message</code>&#x548C;<code>name</code>&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x91CC;&#x6211;&#x53EA;&#x9700;&#x8981;<code>message</code>&#x53EF;&#x89C2;&#x6D4B;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5BF9;&#x5176;&#x5E94;&#x7528;&#x53EF;&#x89C2;&#x6D4B;&#x5B57;&#x6BB5;&#x5373;&#x53EF;&#x3002;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@author</span> &#x68A6;&#x5426; on 2022/3/29
+ * <span class="hljs-doctag">@blog</span> https://mengfou.blog.csdn.net/
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleViewModel</span> : <span class="hljs-type">ViewModel</span></span>() {
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x53EF;&#x89C2;&#x6D4B;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x4F7F;&#x7528;ObservableField</span>
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> message</span> = ObservableField<span class="hljs-type">&lt;String&gt;</span>(<span class="hljs-string">&quot;Hello data binding.&quot;</span>)
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">set</span> <span class="hljs-comment">// &#x963B;&#x6B62;&#x5916;&#x90E8;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x5185;&#x90E8;&#x4FEE;&#x6539;</span>
+
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> name</span> = <span class="hljs-string">&quot;testDemo&quot;</span>
+
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> clickNumber</span> = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">set</span>
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x70B9;&#x51FB;&#x51FD;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onTextViewClick</span><span class="hljs-params">()</span> {</span>
+        clickNumber++
+        <span class="hljs-keyword">if</span> (clickNumber.rem(<span class="hljs-number">2</span>) == <span class="hljs-number">0</span>) message.<span class="hljs-keyword">set</span>(<span class="hljs-string">&quot;is Even&quot;</span>)
+        <span class="hljs-keyword">else</span> message.<span class="hljs-keyword">set</span>(<span class="hljs-string">&quot;is odd&quot;</span>)
+        Log.e(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;onTextViewClick: ${clickNumber}&quot;</span>)
+    }
+}
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x4FEE;&#x6539;&#x5728;<code>xml</code>&#x4E2D;&#x7684;<code>&lt;data&gt;</code>&#x6807;&#x7B7E;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;android.view.View&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">variable</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewModel&quot;</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.weizu.jetpackdemo.SimpleViewModel&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x7684;<code>MainActivity</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity2</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+
+    <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> binding</span>: ActivityMainBinding
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+        <span class="hljs-comment">// 1. setContentView(R.layout.plain_activity) replace with below:</span>
+        <span class="hljs-comment">// data binding</span>
+        binding = DataBindingUtil.setContentView<span class="hljs-type">&lt;ActivityMainBinding&gt;</span>(
+            this,
+            R.layout.activity_main
+        )
+
+        <span class="hljs-comment">// set data</span>
+        binding.viewModel = SimpleViewModel()
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x70B9;&#x51FB;&#x540E;&#x5947;&#x6570;&#x70B9;&#x51FB;&#x548C;&#x5076;&#x6570;&#x70B9;&#x51FB;&#x7684;&#x5207;&#x6362;&#x663E;&#x793A;&#x6587;&#x672C;&#x6548;&#x679C;&#x3002;</p>
+<h2 id="26-&#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;">2.6 &#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;</h2>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x4E2D;&#x9700;&#x8981;&#x8FBE;&#x5230;&#x7684;&#x6548;&#x679C;&#x4E3A;&#xFF1A;&#x5BF9;&#x5E94;&#x5B9A;&#x4E49;&#x7684;&#x53EF;&#x89C2;&#x6D4B;&#x5B57;&#x6BB5;<code>Field</code>&#x5185;&#x5BB9;&#x7684;&#x6539;&#x53D8;&#x53EF;&#x4EE5;&#x901A;&#x77E5;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x63A7;&#x4EF6;&#xFF0C;&#x800C;&#x63A7;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x53D8;&#x5316;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x77E5;&#x5230;<code>Field</code>&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63A7;&#x4EF6;<code>EditText</code>&#x3002;</p>
+<h3 id="261-&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7EE7;&#x627F;&#x81EA;baseobservable">2.6.1 &#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x7EE7;&#x627F;&#x81EA;BaseObservable</h3>
+<p>&#x5728;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>EditText</code>&#x548C;<code>TextView</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">variable</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myViewModel&quot;</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.weizu.jetpackdemo.databinding.MyViewModel&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">tools:context</span>=<span class="hljs-string">&quot;.databinding.MainActivity&quot;</span>&gt;</span>
+
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">EditText</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/editText&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:ems</span>=<span class="hljs-string">&quot;10&quot;</span>
+            <span class="hljs-attr">android:inputType</span>=<span class="hljs-string">&quot;textPersonName&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@={ myViewModel.userInput }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/textView2&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@{ myViewModel.userInput }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">&quot;0.498&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintVertical_bias</span>=<span class="hljs-string">&quot;0.675&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5728;<code>EditText</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"> android:text=&quot;@={ myViewModel.userInput }&quot;
+</code></pre>
+<p>&#x800C;&#x5728;<code>TextView</code>&#x4E2D;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"> android:text=&quot;@{ myViewModel.userInput }&quot;
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x5728;<code>EditText</code>&#x4E2D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B8C;&#x6210;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#xFF0C;&#x5373;&#x7528;&#x6237;&#x8F93;&#x5165;&#x53EF;&#x4EE5;&#x901A;&#x77E5;&#x5230;<code>LiveData</code>&#xFF0C;&#x800C;&#x5728;<code>TextView</code>&#x4E2D;&#x53EA;&#x8981;&#x52A0;&#x8F7D;&#x53D8;&#x5316;&#x540E;&#x7684;&#x6570;&#x636E;&#x5373;&#x53EF;&#x3002;
+&#x90A3;&#x4E48;&#xFF0C;&#x5728;&#x81EA;&#x5B9A;&#x4E49;<code>ViewModel</code>&#x4E2D;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@author</span> &#x68A6;&#x5426; on 2022/4/20
+ * <span class="hljs-doctag">@blog</span> https://mengfou.blog.csdn.net/
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyViewModel</span> :<span class="hljs-type">BaseObservable</span></span>(){
+
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x4E3A;LiveData&#xFF0C;&#x4FBF;&#x4E8E;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;TextView&#x5185;&#x5BB9;&#x7684;&#x81EA;&#x52A8;&#x66F4;&#x65B0;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> userInput</span> = MutableLiveData<span class="hljs-type">&lt;String&gt;</span>(<span class="hljs-string">&quot;Tom&quot;</span>)
+
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x5FD8;&#x8BB0;&#x6DFB;&#x52A0;&#x6CE8;&#x89E3;@Bindable&#xFF0C;&#x5426;&#x5219;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x4E0D;&#x4F1A;&#x751F;&#x6548;</span>
+    @Bindable
+    @JvmName(<span class="hljs-string">&quot;getUserInput&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getUserInput</span><span class="hljs-params">()</span>: String{</span>
+        <span class="hljs-keyword">return</span> userInput.value.toString()
+    }
+
+    <span class="hljs-comment">// &#x7528;&#x4E8E;&#x66F4;&#x65B0;TextView</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">get</span><span class="hljs-params">()</span>: LiveData<span class="hljs-type">&lt;String&gt;</span> {</span>
+        <span class="hljs-keyword">return</span> this.userInput
+    }
+
+    @JvmName(<span class="hljs-string">&quot;setUserInput&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">setUserInput</span><span class="hljs-params">(str: <span class="hljs-type">String</span>)</span>{</span>
+        <span class="hljs-keyword">if</span>(!str.equals(userInput)) {
+            this.userInput.value = str
+        }
+        Log.e(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;setValue: ${str}&quot;</span> )
+        <span class="hljs-comment">// &#x901A;&#x77E5;&#x6570;&#x636E;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;</span>
+        notifyPropertyChanged(BR.myViewModel)  <span class="hljs-comment">// build&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;BR&#x7C7B;&#xFF0C;&#x5BF9;&#x5E94;&#x5728;xml&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;</span>
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x5B8C;&#x6210;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;<code>BaseObservable</code>&#xFF0C;&#x4E14;&#x5728;<code>get</code>&#x65B9;&#x6CD5;&#x4E0A;&#x4F7F;&#x7528;&#x4E86;<code>@Bindable</code>&#x6CE8;&#x89E3;&#x6765;&#x8868;&#x793A;&#x7ED1;&#x5B9A;&#x3002;&#x81F3;&#x4E8E;<code>get()</code>&#x65B9;&#x6CD5;&#x4EC5;&#x662F;&#x4E3A;&#x4E86;&#x8FD4;&#x56DE;<code>LiveData</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5728;<code>Activity</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x89C2;&#x5BDF;&#xFF0C;&#x66F4;&#x65B0;<code>TextView</code>&#x63A7;&#x4EF6;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> binding</span> =
+            DataBindingUtil.setContentView<span class="hljs-type">&lt;ActivityMain2Binding&gt;</span>(
+                this,
+                R.layout.activity_main2
+            )
+        <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x4F7F;&#x7528;new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+        <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x7684;&#x81EA;&#x5B9A;&#x4E49;ViewModel&#x7EE7;&#x627F;&#x7684;&#x662F;BaseObservable&#x7C7B;&#xFF0C;&#x4E0D;&#x662F;ViewModel&#x7C7B;</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> myViewModel</span> = MyViewModel()
+        binding.myViewModel = myViewModel
+        <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x89C2;&#x5BDF;&#xFF0C;&#x4EE5;&#x66F4;&#x65B0;TextView&#x6587;&#x672C;</span>
+        myViewModel.<span class="hljs-keyword">get</span>().observe(this) {
+            binding.textView2.text = myViewModel.<span class="hljs-keyword">get</span>().value
+        }
+    }
+}
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;
+<img src="images/screenshot_1650429202699.png" alt=""></p>
+<h3 id="262-&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7EE7;&#x627F;&#x81EA;observablefield">2.6.2 &#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x7EE7;&#x627F;&#x81EA;ObservableField</h3>
+<p>&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">variable</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myViewModel&quot;</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.weizu.jetpackdemo.databinding.MyViewModel&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">tools:context</span>=<span class="hljs-string">&quot;.databinding.MainActivity&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">EditText</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/editText&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:ems</span>=<span class="hljs-string">&quot;10&quot;</span>
+            <span class="hljs-attr">android:inputType</span>=<span class="hljs-string">&quot;textPersonName&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@={ myViewModel.userInput }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/textView2&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@{ myViewModel.userInput }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">&quot;0.498&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintVertical_bias</span>=<span class="hljs-string">&quot;0.675&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;<code>ViewModel</code>&#x8FDB;&#x884C;&#x5220;&#x51CF;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyViewModel</span> </span>{
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x4E3A;&#x53EF;&#x89C2;&#x5BDF;&#x7C7B;&#x578B;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> userInput</span> = ObservableField<span class="hljs-type">&lt;String&gt;</span>(<span class="hljs-string">&quot;Tom&quot;</span>)
+}
+</code></pre>
+<p>&#x6700;&#x540E;&#x5728;<code>Activity</code>&#x4E2D;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> binding</span> =
+            DataBindingUtil.setContentView<span class="hljs-type">&lt;ActivityMain2Binding&gt;</span>(
+                this,
+                R.layout.activity_main2
+            )
+        <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x4F7F;&#x7528;new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+        <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x7684;&#x81EA;&#x5B9A;&#x4E49;ViewModel&#x7EE7;&#x627F;&#x7684;&#x662F;BaseObservable&#x7C7B;&#xFF0C;&#x4E0D;&#x662F;ViewModel&#x7C7B;</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> myViewModel</span> = MyViewModel()
+        binding.myViewModel = myViewModel
+        <span class="hljs-comment">// &#x5728;xml&#x6587;&#x4EF6;&#xFF1A;@=&#x64CD;&#x4F5C;&#x7B26;&#x8FDB;&#x884C;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;</span>
+    }
+}
+</code></pre>
+<p>&#x8FBE;&#x5230;&#x7684;&#x6548;&#x679C;&#x548C;&#x4E0A;&#x5C0F;&#x8282;&#x4E00;&#x6837;&#x3002;</p>
+<h2 id="27-recyclerviewdatabinding">2.7 RecyclerView+dataBinding</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>databinding</code>&#x6765;&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;<code>item</code>&#x7684;&#x5185;&#x5BB9;&#x3002;&#x6BD4;&#x5982;&#x5728;&#x4E3B;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">tools:context</span>=<span class="hljs-string">&quot;.recycleview.MainActivity&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">androidx.recyclerview.widget.RecyclerView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/recyclerView&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;0dp&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x4E86;<code>RecyclerView</code>&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x8FD8;&#x662F;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x7684;&#x9002;&#x914D;&#x5668;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@author</span> &#x68A6;&#x5426; on 2022/4/20
+ * <span class="hljs-doctag">@blog</span> https://mengfou.blog.csdn.net/
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyRecycleViewAdapter</span></span>(<span class="hljs-variable"><span class="hljs-keyword">var</span> context</span>: Context, <span class="hljs-variable"><span class="hljs-keyword">var</span> datas</span>: List<span class="hljs-type">&lt;User&gt;</span>) :
+    RecyclerView.Adapter<span class="hljs-type">&lt;MyRecycleViewAdapter.MyViewHolder&gt;</span>() {
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateViewHolder</span><span class="hljs-params">(parent: <span class="hljs-type">ViewGroup, viewType: Int</span>)</span>: MyViewHolder {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> inflater</span> = LayoutInflater.from(context)
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> binding</span> = DataBindingUtil.inflate<span class="hljs-type">&lt;RecyclerviewItemBinding&gt;</span>(
+            inflater,
+            R.layout.recyclerview_item,
+            parent,
+            <span class="hljs-literal">false</span>
+        )
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> myViewHolder</span> = MyViewHolder(binding.root)
+        myViewHolder.binding = binding
+        <span class="hljs-keyword">return</span> myViewHolder
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">MyViewHolder, position: Int</span>)</span> {</span>
+        holder.binding?.user = datas[position]
+        Log.e(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;onBindViewHolder: ${position} + ${ datas[position].name }&quot;</span>)
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> {</span>
+        <span class="hljs-keyword">return</span> datas.size
+    }
+
+    inner <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyViewHolder</span></span>(<span class="hljs-variable"><span class="hljs-keyword">var</span> root</span>: View) : RecyclerView.ViewHolder(root) {
+        <span class="hljs-variable"><span class="hljs-keyword">var</span> binding</span>: RecyclerviewItemBinding? = <span class="hljs-literal">null</span>
+    }
+}
+</code></pre>
+<p>&#x540C;&#x6837;&#x7684;&#x5728;<code>R.layout.recyclerview_item</code>&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;<code>databinding</code>&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>
+    &gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">variable</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;user&quot;</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.weizu.jetpackdemo.recycleview.User&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/textView3&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@{ user.name }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toTopOf</span>=<span class="hljs-string">&quot;@+id/textView4&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.Guideline</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/guideline3&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:orientation</span>=<span class="hljs-string">&quot;horizontal&quot;</span>
+            <span class="hljs-attr">app:layout_constraintGuide_begin</span>=<span class="hljs-string">&quot;93dp&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.Guideline</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/guideline4&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:orientation</span>=<span class="hljs-string">&quot;horizontal&quot;</span>
+            <span class="hljs-attr">app:layout_constraintGuide_begin</span>=<span class="hljs-string">&quot;20dp&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/textView4&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@{ String.valueOf(user.age) }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toTopOf</span>=<span class="hljs-string">&quot;@+id/guideline3&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span> /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/imageView2&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+            <span class="hljs-attr">android:layout_marginStart</span>=<span class="hljs-string">&quot;16dp&quot;</span>
+            <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">&quot;1dp&quot;</span>
+            <span class="hljs-attr">android:imageSrc</span>=<span class="hljs-string">&quot;@{ user.image }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toStartOf</span>=<span class="hljs-string">&quot;@+id/textView4&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">tools:srcCompat</span>=<span class="hljs-string">&quot;@tools:sample/avatars&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;<code>User</code>&#x7C7B;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span></span>(<span class="hljs-variable"><span class="hljs-keyword">var</span> age</span>: <span class="hljs-keyword">Int</span>, <span class="hljs-variable"><span class="hljs-keyword">var</span> name</span>: String) {
+    <span class="hljs-variable"><span class="hljs-keyword">var</span> image</span> = <span class="hljs-string">&quot;https://i1.hdslb.com/bfs/face/7e72c58637ff26df68fb30939de078d2bbbfcdbe.jpg&quot;</span>
+}
+</code></pre>
+<p>&#x5728;&#x4E3B;<code>Activity</code>&#x4E2D;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> binding</span> =
+            DataBindingUtil.setContentView<span class="hljs-type">&lt;ActivityMain3Binding&gt;</span>(
+                this,
+                R.layout.activity_main3
+            )
+
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> datas</span> = listOf<span class="hljs-type">&lt;User&gt;</span>(
+            User(<span class="hljs-number">12</span>, <span class="hljs-string">&quot;Jack&quot;</span>),
+            User(<span class="hljs-number">10</span>, <span class="hljs-string">&quot;Tom&quot;</span>),
+            User(<span class="hljs-number">23</span>, <span class="hljs-string">&quot;Joe&quot;</span>)
+        )
+        <span class="hljs-comment">// &#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x5E03;&#x5C40;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x663E;&#x793A;RecyclerView</span>
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter = MyRecycleViewAdapter(this, datas)
+    }
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x5373;&#x53EF;&#x770B;&#x89C1;&#x6548;&#x679C;&#x3002;</p>
+<h1 id="3-&#x81EA;&#x5B9A;&#x4E49;bindingadapter">3. &#x81EA;&#x5B9A;&#x4E49;BindingAdapter</h1>
+<p>&#x53C2;&#x8003;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;<a href="https://www.bilibili.com/video/BV1Ry4y1t7Tj?p=12" target="_blank">https://www.bilibili.com/video/BV1Ry4y1t7Tj?p=12</a>
+&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x611F;&#x89C9;&#x6BD4;&#x8F83;&#x5178;&#x578B;&#xFF0C;&#x8FBE;&#x5230;&#x7684;&#x6548;&#x679C;&#x4E3A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>databinding</code>&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x7684;&#x94FE;&#x63A5;&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x5F0F;&#x6765;<strong>&#x76F4;&#x63A5;</strong>&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x5B57;&#x6BB5;&#x3002;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x52A0;&#x8F7D;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x6848;&#x4F8B;&#xFF1A;
+&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">variable</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;src&quot;</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+        <span class="hljs-attr">tools:context</span>=<span class="hljs-string">&quot;.BindingAdapterActivity&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/imageView&quot;</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;300dp&quot;</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;300dp&quot;</span>
+            <span class="hljs-attr">app:imageSrc</span>=<span class="hljs-string">&quot;@{ src }&quot;</span>
+            <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+            <span class="hljs-attr">tools:srcCompat</span>=<span class="hljs-string">&quot;@tools:sample/avatars&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x5728;<code>ImageView</code>&#x6807;&#x7B7E;&#x4E2D;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code class="lang-xml"> app:imageSrc=&quot;@{ src }&quot;
+</code></pre>
+<p>&#x800C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4EE5;&#x524D;&#x6211;&#x4EEC;&#x662F;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>tool:</code>&#x5E76;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x7684;<code>styleable</code>&#x6837;&#x5F0F;&#x3002;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x4EC5;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x6765;&#x7533;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ImageViewCus</span> </span>{
+
+    <span class="hljs-comment">// &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x65B9;&#x6CD5;</span>
+   <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+
+       @JvmStatic
+       @BindingAdapter(<span class="hljs-string">&quot;app:imageSrc&quot;</span>)
+       <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">loadImage</span><span class="hljs-params">(imageView: <span class="hljs-type">ImageView, str: String</span>)</span>{</span>
+           Glide.with(imageView.context)
+               .load(str)
+               .placeholder(R.drawable.ic_launcher_background)
+               .into(imageView)
+       }
+   }
+}
+</code></pre>
+<p>&#x6700;&#x540E;&#x662F;&#x5728;<code>Activity</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBindingAdapterActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> binding</span> = DataBindingUtil.setContentView<span class="hljs-type">&lt;ActivityBindingAdapterBinding&gt;</span>(
+            this,
+            R.layout.activity_binding_adapter
+        )
+        binding.src = <span class="hljs-string">&quot;https://img-blog.csdnimg.cn/5690c131d90e460fa4c96bf86b1ae634.png&quot;</span>
+    }
+}
+</code></pre>
+<p>&#x4F20;&#x5165;<code>databinding</code>&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5373;&#x53EF;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x9884;&#x671F;&#x7684;&#x6548;&#x679C;&#x3002;&#x6574;&#x4F53;&#x7684;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x611F;&#x89C9;&#x548C;<code>SpringBoot</code>&#x4E2D;&#x7684;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x6BD4;&#x8F83;&#x597D;&#x5947;&#x7684;&#x662F;&#x96BE;&#x9053;&#x8FD9;&#x91CC;&#x4E5F;&#x4F1A;&#x626B;&#x63CF;&#x6240;&#x6709;&#x5305;/&#x7C7B;&#x4E2D;&#x7684;&#x6CE8;&#x89E3;&#xFF1F;&#x5E94;&#x8BE5;&#x662F;&#x7684;&#xFF0C;&#x7B49;&#x50A8;&#x5907;&#x77E5;&#x8BC6;&#x591F;&#x4E86;&#x518D;&#x6DF1;&#x5165;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x68A6;&#x5426; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-26 18:31:38
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="视图绑定.html" class="navigation navigation-prev " aria-label="Previous page: 视图绑定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="【AndroidJetpack】Room.html" class="navigation navigation-next " aria-label="Next page: 【Android Jetpack】Room——基本使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据绑定","level":"1.5","depth":1,"next":{"title":"【Android Jetpack】Room——基本使用","level":"1.6","depth":1,"path":"【AndroidJetpack】Room.md","ref":"【AndroidJetpack】Room.md","articles":[]},"previous":{"title":"视图绑定","level":"1.4","depth":1,"path":"视图绑定.md","ref":"视图绑定.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","popup","splitter","code","chapter-fold","tbfed-pagefooter","splitter","theme-comscore","github-buttons"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 梦否 2022","modify_label":"最后更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"github-buttons":{"repo":"zhangjikai/gitbook-use","types":["star","watch","fork"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"梦否","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jetpack","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://mengfou.blog.csdn.net/","我的Github":"https://github.com/baiyazi"}},"gitbook":"*","description":"This is such a great book!","direction":"rtl"},"file":{"path":"数据绑定.md","mtime":"2022-04-26T10:31:38.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-27T07:15:12.546Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

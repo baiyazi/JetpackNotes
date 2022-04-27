@@ -1,0 +1,839 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>【Android Jetpack】Room——基本使用 · Jetpack</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="梦否">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Livedata.html" />
+    
+    
+    <link rel="prev" href="数据绑定.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhangjikai/gitbook-use","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mengfou.blog.csdn.net/" target="_blank" class="custom-link">我的CSDN博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/baiyazi" target="_blank" class="custom-link">我的Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Jetpack之LifeCycle.html">
+            
+                <a href="Jetpack之LifeCycle.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    【Android Jetpack】LifeCycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="数据存储.md">
+            
+                <span>
+            
+                    
+                        <b>1.3.</b>
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="DataStore.html">
+            
+                <a href="DataStore.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    DataStore
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="视图绑定.html">
+            
+                <a href="视图绑定.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    视图绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="数据绑定.html">
+            
+                <a href="数据绑定.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    数据绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="【AndroidJetpack】Room.html">
+            
+                <a href="【AndroidJetpack】Room.html">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    【Android Jetpack】Room——基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Livedata.html">
+            
+                <a href="Livedata.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    【Android Jetpack】Livedata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="【AndroidJetpack】Room+ViewModel+LiveData.html">
+            
+                <a href="【AndroidJetpack】Room+ViewModel+LiveData.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    【Android Jetpack】Room+ViewModel+LiveData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="【AndroidJetpack】Room——其余.html">
+            
+                <a href="【AndroidJetpack】Room——其余.html">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    【Android Jetpack】Room——其余
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="【AndroidJetpack】Room——对象之间的关系.html">
+            
+                <a href="【AndroidJetpack】Room——对象之间的关系.html">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    【Android Jetpack】Room——多表之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >【Android Jetpack】Room——基本使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[toc]</p>
+<h1 id="1-&#x524D;&#x8A00;">1. &#x524D;&#x8A00;</h1>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x5C31;&#x662F;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#x8FC7;&#x7684;<code>SQLite</code>&#x6570;&#x636E;&#x5E93;&#x3002;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x5728;<code>java</code>&#x4E2D;&#x662F;&#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x7EE7;&#x627F;&#x81EA;<code>SQLiteOpenHelper</code>&#x7C7B;&#xFF0C;&#x590D;&#x5199;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;<code>Helper</code>&#x5B9E;&#x4F8B;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7;<code>SQLiteOpenHelper</code>&#x7684;&#x5B9E;&#x4F8B;&#x7684;<code>getWritableDatabase()</code>&#x6765;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5B9E;&#x4F8B;&#xFF1B;</li>
+<li>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;<code>CRUD</code>&#x64CD;&#x4F5C;&#xFF1B;</li>
+</ul>
+<p>&#x7B80;&#x5355;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x5728;<code>Java</code>&#x4E2D;&#x7684;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code>// &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;Helper
+public class MySQLiteOpenHelper extends SQLiteOpenHelper {
+    private Context context;
+    private String name;
+    private String bookSql = &quot;create table Book (id integer primary key autoincrement, &quot; +
+            &quot;name text, pages integer)&quot;;
+    private String userSql = &quot;create table User (name text, age integer)&quot;;
+
+    public MySQLiteOpenHelper(@Nullable Context context,
+                              @Nullable String name,
+                              @Nullable SQLiteDatabase.CursorFactory factory,
+                              int version) {
+        super(context, name, factory, version);
+        this.context = context;
+        this.name = name;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        // &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x8868;
+        db.execSQL(bookSql);
+        db.execSQL(userSql);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(&quot;drop table if exists Book&quot;);
+        db.execSQL(&quot;drop table if exists User&quot;);
+        onCreate(db); // &#x91CD;&#x65B0;&#x6267;&#x884C;&#x4E00;&#x4E0B;onCreate&#x65B9;&#x6CD5;
+    }
+}
+
+// &#x83B7;&#x53D6;db&#x5BF9;&#x8C61;
+mySQLiteOpenHelper = new MySQLiteOpenHelper(getApplicationContext(),
+                &quot;BookDatabase.db&quot;, null, 3);
+SQLiteDatabase db= mySQLiteOpenHelper.getWritableDatabase();
+
+
+
+// CRUD
+db.insert(&quot;Book&quot;, null, values);
+</code></pre><h1 id="2-kotlin&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;">2. Kotlin&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h1>
+<p>&#x867D;&#x7136;&#x5728;<code>Kotlin</code>&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x50CF;&#x4E0A;&#x9762;&#x7684;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;<code>Google</code>&#x63A8;&#x51FA;&#x4E86;&#x4E00;&#x6B3E;&#x6570;&#x636E;&#x5E93;&#x6846;&#x67B6;&#xFF0C;&#x5373;&#xFF1A;<code>Room</code>&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x8FDB;&#x884C;&#x5B8C;&#x6210;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="21-&#x4F9D;&#x8D56;">2.1 &#x4F9D;&#x8D56;</h2>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code>// Room
+def room_version = &quot;2.2.6&quot;
+implementation &quot;androidx.room:room-runtime:$room_version&quot;
+// For Kotlin use kapt instead of annotationProcessor (&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x6CE8;&#x91CA;)
+kapt &quot;androidx.room:room-compiler:$room_version&quot;
+implementation &quot;androidx.room:room-ktx:$room_version&quot;
+testImplementation &quot;androidx.room:room-testing:$room_version&quot;
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x91CC;&#x5728;<code>kotlin</code>&#x4E2D;&#x4F7F;&#x7528;<code>kapt</code>&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF1A;</p>
+<pre><code>plugins {
+    id &apos;com.android.application&apos;
+    id &apos;kotlin-android&apos;
+    id &apos;kotlin-kapt&apos;
+}
+</code></pre><p>&#x6CE8;&#x91CA;&#xFF1A;&#x5982;&#x679C;&#x9879;&#x76EE;&#x662F;&#x4F7F;&#x7528;<code>Kotlin</code>&#x8BED;&#x8A00;&#x6765;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x5728;&#x6DFB;&#x52A0;<code>room-compiler</code>&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;<code>kapt</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;<code>java</code>&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x7684;&#x5C31;&#x4F7F;&#x7528;<code>annotationProcessor</code>&#x5173;&#x952E;&#x5B57;&#x3002;</p>
+<h2 id="22-&#x57FA;&#x7840;&#x6982;&#x5FF5;">2.2 &#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
+<p>&#x8981;&#x60F3;&#x4F7F;&#x7528;<code>Room</code>&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x4E86;&#x89E3;&#x6700;&#x57FA;&#x7840;&#x7684;&#x4E09;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><p><code>Entity</code>&#xFF1A;&#x5B9E;&#x4F53;&#x7C7B;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E00;&#x5F20;&#x8868;&#x7ED3;&#x6784;&#x3002;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6CE8;&#x89E3; <code>@Entity</code> &#x6807;&#x8BB0;&#x3002;&#x9ED8;&#x8BA4;&#x5B9E;&#x4F53;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#x4E3A;&#x8868;&#x540D;&#xFF0C;&#x5B57;&#x6BB5;&#x540D;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+</li>
+<li><p><code>Dao</code>&#xFF1A;&#x5305;&#x542B;&#x8BBF;&#x95EE;&#x4E00;&#x7CFB;&#x5217;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6CE8;&#x89E3; <code>@Dao</code> &#x6807;&#x8BB0;&#x3002;</p>
+</li>
+<li><p><code>Database</code>&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x6301;&#x6709;&#x8005;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E0E;&#x5E94;&#x7528;&#x6301;&#x4E45;&#x5316;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7684;&#x5E95;&#x5C42;&#x8FDE;&#x63A5;&#x7684;&#x4E3B;&#x8981;&#x63A5;&#x5165;&#x70B9;&#x3002;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6CE8;&#x89E3; <code>@Database</code> &#x6807;&#x8BB0;&#x3002;</p>
+</li>
+</ul>
+<p>&#x4F7F;&#x7528;<code>@Database</code>&#x6CE8;&#x89E3;&#x9700;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><p>&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x4E8E;<code>RoomDatabase</code>&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x6CE8;&#x89E3;&#x4E2D;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x76F8;&#x5173;&#x8054;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x5217;&#x8868;&#x3002;</p>
+</li>
+<li><p>&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x6CE8;&#x89E3;&#x7684; <code>@Dao</code>&#x3002;</p>
+</li>
+</ul>
+<p>&#x6CE8;&#x91CA;&#xFF1A;&#x4EE5;&#x4E0A;&#x57FA;&#x7840;&#x6982;&#x5FF5;&#x6458;&#x81EA;&#xFF1A;<a href="https://blog.csdn.net/singwhatiwanna/article/details/104890202/" target="_blank">Jetpack&#x67B6;&#x6784;&#x7EC4;&#x4EF6; &#x2014; Room&#x5165;&#x5751;&#x8BE6;&#x89E3;</a></p>
+<h3 id="22-1-entity">2.2 1 @Entity</h3>
+<p>&#x4ECE;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;<code>@Entity</code>&#x4F5C;&#x7528;&#x5728;&#x7C7B;&#x4E0A;&#xFF0C;&#x8BE5;&#x7C7B;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x3002;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x90A3;&#x4E48;&#x7C7B;&#x4F3C;&#x7684;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E3B;&#x952E;&#x548C;&#x6CE8;&#x91CA;&#x3002;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#xFF1A;</p>
+<ul>
+<li><code>@PrimaryKey</code>&#x6CE8;&#x89E3;&#x7528;&#x6765;&#x6807;&#x6CE8;&#x8868;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>autoGenerate = true</code>&#x6765;&#x6307;&#x5B9A;&#x4E86;&#x4E3B;&#x952E;&#x81EA;&#x589E;&#x957F;&#xFF1B;</li>
+<li><code>@ColumnInfo</code>&#x6CE8;&#x89E3;&#x7528;&#x6765;&#x6807;&#x6CE8;&#x8868;&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x7684;&#x4FE1;&#x606F;&#x6BD4;&#x5982;&#x8868;&#x540D;&#x3001;&#x9ED8;&#x8BA4;&#x503C;&#x7B49;&#x7B49;&#x3002;</li>
+<li><code>@Ignore</code> &#x6CE8;&#x89E3;&#x987E;&#x540D;&#x601D;&#x4E49;&#x5C31;&#x662F;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x7684;&#x5B57;&#x6BB5;&#x5C06;&#x4E0D;&#x4F1A;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<h3 id="222-dao">2.2.2 @Dao</h3>
+<p><code>Dao</code>&#x7C7B;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5176;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65B9;&#x6CD5;&#x3002;<code>Room</code>&#x4E5F;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x63D0;&#x4F9B;&#x4E86;&#x76F8;&#x5173;&#x7684;&#x6CE8;&#x89E3;&#xFF0C;&#x6709;<code>@Insert</code>&#x3001;<code>@Delete</code>&#x3001;<code>@Update</code> &#x548C; <code>@Query</code>&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code>@Query(&quot;select * from user where userId = :id&quot;) 
+fun getUserById(id: Long): User
+</code></pre><h3 id="223-database">2.2.3 @Database</h3>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;<code>RoomDatabase</code>&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x6CE8;&#x89E3; <code>@Database</code> &#x6765;&#x6807;&#x8BC6;&#x3002;</p>
+<h2 id="23-&#x5B9E;&#x6218;">2.3 &#x5B9E;&#x6218;</h2>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x6765;&#x5B58;&#x50A8;&#x7528;&#x6237;&#x8BB0;&#x4E8B;&#x672C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5927;&#x81F4;&#x5305;&#x62EC;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;
+|  &#x5B57;&#x6BB5;   |  &#x8BF4;&#x660E;   |
+| --- | --- |
+|  <code>title</code>   |  &#x6807;&#x9898;   |
+|   <code>content</code>  |  &#x6570;&#x636E;&#x5185;&#x5BB9;   |
+|  <code>firstSubmit</code>   |   &#x9996;&#x6B21;&#x63D0;&#x4EA4;&#x65F6;&#x95F4;  |
+|   <code>lastModifiy</code>  |   &#x6700;&#x540E;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#x65F6;&#x95F4;  |
+|  <code>type</code>   |   &#x7C7B;&#x578B;&#xFF0C;&#x666E;&#x901A;&#x8BB0;&#x4E8B;&#x6216;&#x8005;&#x5F85;&#x529E;  |
+|  <code>label</code>   |   &#x6807;&#x7B7E;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;<code>#</code>&#x53F7;&#x5206;&#x5272; |
+|   <code>category</code>  |   &#x5206;&#x7C7B;&#xFF0C;&#x5DE5;&#x4F5C;/&#x5B66;&#x4E60;/&#x751F;&#x6D3B;/...  |
+|  <code>groupId</code>   |   &#x7EC4;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF0C;&#x8868;&#x793A;&#x5355;&#x4E2A;&#x8BB0;&#x5F55;&#xFF1B;&#x5982;&#x679C;&#x4E3A;&#x591A;&#x4E2A;&#xFF0C;&#x8868;&#x793A;&#x524D;&#x7AEF;&#x663E;&#x793A;&#x4E3A;&#x91CD;&#x53E0;  |</p>
+<p>&#x90A3;&#x4E48;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>@Entity</code>&#x6CE8;&#x89E3;&#x6765;&#x751F;&#x6210;&#x903B;&#x8F91;&#x7684;&#x8868;&#xFF08;<code>MFNote</code>&#xFF09;&#xFF1A;</p>
+<pre><code>@Entity
+class MFNote {
+    @PrimaryKey(autoGenerate = true)
+    var noteId: Int = 0
+
+    @ColumnInfo(defaultValue = &quot;&#x65E0;&#x6807;&#x9898;&quot;)
+    lateinit var title: String
+
+    @ColumnInfo(defaultValue = &quot;&quot;)
+    lateinit var content: String
+
+    @ColumnInfo(name = &quot;first_submit&quot;)
+    var submit: String? = null
+
+    @ColumnInfo(name = &quot;last_modify&quot;)
+    var modify: String? = null
+
+    var type: Int = 0
+
+    @ColumnInfo(defaultValue = &quot;&#x9ED8;&#x8BA4;&quot;)
+    lateinit var label: String
+
+
+    @ColumnInfo(defaultValue = &quot;&#x9ED8;&#x8BA4;&quot;)
+    lateinit var category: String
+
+    @ColumnInfo(name = &quot;group_id&quot;)
+    var groupId: Int = 1
+}
+</code></pre><p>&#x7136;&#x540E;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;<code>MFNote</code>&#x8868;&#x7684;<code>DAO</code>&#x63A5;&#x53E3;&#xFF08;<code>MFDao</code>&#xFF09;&#xFF1A;</p>
+<pre><code>@Dao
+interface MFDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(mfNote: MFNote?)
+
+    @Delete
+    fun delete(mfNote: MFNote): Int
+
+    @Query(&quot;select * from MFNote&quot;)
+    fun getAllNotes(): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where type = :type&quot;)
+    fun getNotesByType(type: Int): MFNote
+
+    @Update
+    fun updateNoteByNote(mfNote: MFNote)
+}
+</code></pre><p>&#x53C2;&#x6570;<code>onConflict</code>&#xFF0C;&#x8868;&#x793A;&#x7684;&#x662F;&#x5F53;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#xFF0C;&#x6709;&#x4E09;&#x79CD;&#x64CD;&#x4F5C;&#x903B;&#x8F91;&#xFF1A;<code>REPLACE</code>&#x3001;<code>ABORT</code>&#x548C;<code>IGNORE</code>&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;<code>ABORT</code>&#x7EC8;&#x6B62;&#x63D2;&#x5165;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x6307;&#x5B9A;&#x4E3A;<code>REPLACE</code>&#x66FF;&#x6362;&#x539F;&#x6709;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x9700;&#x8981;&#x6784;&#x5EFA;<code>Room</code>&#x4F7F;&#x7528;&#x7684;&#x5165;&#x53E3;<code>RoomDatabase</code>&#x3002;</p>
+<pre><code>@Database(entities = [MFNote::class], version = 1)
+abstract class MFNoteDataBase : RoomDatabase() {
+
+    abstract fun mfDao(): MFDao
+
+    companion object {
+        @Volatile
+        private var mInstance: MFNoteDataBase? = null
+        private const val DATABASE_NAME = &quot;MFNote.db&quot;
+
+        @JvmStatic
+        fun getInstance(context: Context): MFNoteDataBase? {
+            if (mInstance == null) {
+                synchronized(MFNoteDataBase::class.java) {
+                    if (mInstance == null) {
+                        mInstance = createInstance(context)
+                    }
+                }
+            }
+            return mInstance
+        }
+
+        private fun createInstance(context: Context): MFNoteDataBase {
+            mInstance = Room.databaseBuilder(
+                context.applicationContext,
+                MFNoteDataBase::class.java,
+                DATABASE_NAME
+            ).build()
+            return mInstance as MFNoteDataBase
+        }
+    }
+}
+</code></pre><p>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5BF9;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8868;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code>@Database(entities = [User::class, Course::class, Teacher::class, UserJoinCourse::class, IDCard::class], version = 1)
+abstract class AppDataBase : RoomDatabase() {
+    abstract fun userDao(): UserDao
+    abstract fun teacherDao(): TeacherDao
+    abstract fun courseDao(): CourseDao
+    abstract fun userJoinCourseDao(): UserJoinCourseDao
+    abstract fun idCardDao(): IDCardDao
+}
+</code></pre><ul>
+<li><code>@Database</code> &#x8868;&#x793A;&#x7EE7;&#x627F;&#x81EA;<code>RoomDatabase</code>&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;<code>entities</code>&#x6307;&#x5B9A;&#x8868;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x5217;&#x8868;&#xFF0C;<code>version</code>&#x6307;&#x5B9A;&#x4E86;<code>DB</code>&#x7248;&#x672C;</li>
+</ul>
+<ul>
+<li>&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x83B7;&#x53D6;<code>DAO</code>&#x63A5;&#x53E3;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x5B9A;&#x4E49;&#x7684;<code>movieDao()</code>&#xFF0C;<code>Room</code>&#x5C06;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9E;&#x4F8B;&#x5316;<code>DAO</code>&#x63A5;&#x53E3;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x4E86;&#xFF1A;</p>
+<pre><code>class TestActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_test)
+
+        // &#x8C03;&#x7528;Room&#x6570;&#x636E;&#x5E93;
+        val mfDao = MFNoteDataBase.getInstance(this)?.mfDao()
+        mfDao?.insert(MFNote())
+
+        mfDao?.getAllNotes()?.forEach {
+            Log.e(&quot;TAG&quot;, &quot;onCreate: ${it.title}, ${it.category}&quot; )
+        }
+    }
+}
+</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;
+<img src="images/screenshot_1650332268876.png" alt=""></p>
+<p>&#x6700;&#x7EC8;&#x6211;&#x5728;<code>Dao</code>&#x5C42;&#x6DFB;&#x52A0;&#x4E86;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>@Dao
+interface MFDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(mfNote: MFNote?)
+
+    @Delete
+    fun delete(mfNote: MFNote): Int
+
+    @Query(&quot;select * from MFNote&quot;)
+    fun getAllNotes(): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where noteId = :id&quot;)
+    fun getNoteByNoteId(id: Int): MFNote
+
+    @Query(&quot;select * from MFNote where type = :type&quot;)
+    fun getNotesByType(type: Int): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where label like &apos;%&apos; || :label || &apos;%&apos;&quot;)
+    fun getNotesByLabel(label: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where category like &apos;%&apos; || :category || &apos;%&apos;&quot;)
+    fun getNotesByCategory(category: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where group_id = :groupId&quot;)
+    fun getNotesByGroupId(groupId: Int): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where first_submit &gt;= :beginTime and first_submit &lt;= :endTime&quot;)
+    fun getNotesBySubmitTime(beginTime: String, endTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where first_submit &gt;= :beginTime&quot;)
+    fun getNotesByStartSubmitTime(beginTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where first_submit &lt;= :endTime&quot;)
+    fun getNotesByEndSubmitTime(endTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where last_modify &gt;= :beginTime and last_modify &lt;= :endTime&quot;)
+    fun getNotesByModifyTime(beginTime: String, endTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where last_modify &gt;= :beginTime&quot;)
+    fun getNotesByStartModifyTime(beginTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where last_modify &lt;= :endTime&quot;)
+    fun getNotesByEndModifyTime(endTime: String): List&lt;MFNote&gt;
+
+    @Query(&quot;select * from MFNote where (title like &apos;%&apos; || :words || &apos;%&apos;) or (content like &apos;%&apos; || :words || &apos;%&apos;) or (first_submit like &apos;%&apos; || :words || &apos;%&apos;) or (last_modify like &apos;%&apos; || :words || &apos;%&apos;) or (label like &apos;%&apos; || :words || &apos;%&apos;) or (category like &apos;%&apos; || :words || &apos;%&apos;)&quot;)
+    fun getNodesByKeyWords(words: String): List&lt;MFNote&gt;
+
+    @Update
+    fun updateNoteByNote(mfNote: MFNote)
+}
+</code></pre><p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>class TestActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_test)
+
+        // &#x8C03;&#x7528;Room&#x6570;&#x636E;&#x5E93;
+        val mfDao = MFNoteDataBase.getInstance(this)?.mfDao()
+        val mfNote = MFNote()
+        mfNote.title = &quot;&#x6D4B;&#x8BD5;&quot;
+        mfNote.content = &quot;&#x7B2C;&#x4E00;&#x6761;&#x6D4B;&#x8BD5;&quot;
+        mfDao?.insert(mfNote)
+        mfDao?.getAllNotes()?.forEach {
+            Log.e(&quot;TAG&quot;, &quot;onCreate: ${it.title}, ${it.category}&quot; )
+        }
+
+        val notesByType = mfDao?.getNotesByType(0)
+        notesByType?.forEach {
+            Log.e(&quot;TAG&quot;, &quot;onCreate: ${it.title}, ${it.category}&quot; )
+        }
+
+        val entity = mfDao?.getNoteByNoteId(2)
+
+        Log.e(&quot;TAG&quot;, &quot;onCreate: ${entity?.title}, ${entity?.firstSubmit}&quot; )
+
+        entity?.title = &quot;&#x5389;&#x5BB3;&quot;
+        mfDao?.updateNoteByNote(entity!!)
+    }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x5747;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x3002;</p>
+<h1 id="3-&#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;&#xFF08;migration&#xFF09;">3. &#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;&#xFF08;Migration&#xFF09;</h1>
+<h2 id="31-&#x6B63;&#x5E38;&#x5347;&#x7EA7;">3.1 &#x6B63;&#x5E38;&#x5347;&#x7EA7;</h2>
+<p>&#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x539F;&#x6765;&#x7684;&#x8868;&#x4E2D;&#x52A0;&#x5165;&#x4E00;&#x4E9B;&#x5B57;&#x6BB5;&#x5185;&#x5BB9;&#x3002;&#x5728;<code>Room</code>&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x6BD4;&#x8F83;&#x4FBF;&#x6377;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5347;&#x7EA7;&#x65B9;&#x5F0F;&#x3002;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>Migration</code>&#x6765;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x3002;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x8DF3;&#x7248;&#x672C;&#x7684;&#x5347;&#x7EA7;&#xFF0C;&#x6BD4;&#x5982;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7248;&#x672C;&#x4E3A;1&#xFF0C;&#x800C;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;&#x4E3A;3&#xFF0C;&#x90A3;&#x4E48;<code>Room</code>&#x53EF;&#x4EE5;&#x4F9D;&#x6B21;&#x6267;&#x884C;<code>1-2-3</code>&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x6BD4;&#x5982;&#x6B64;&#x65F6;&#x6211;&#x6709;&#x4E00;&#x4E2A;&#x8868;<code>User</code>&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;
+<img src="images/screenshot_1650522096232.png" alt=""></p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;<code>Room</code>&#x7684;&#x4F7F;&#x7528;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x4ECB;&#x7ECD;&#x3002;&#x6B64;&#x65F6;&#x7684;&#x9700;&#x6C42;&#x4E3A;&#x5728;&#x8868;&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;<code>nickName</code>&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;<code>Migration</code>&#xFF1A;</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">createInstance</span><span class="hljs-params">(context: <span class="hljs-type">Context</span>)</span>: UserDataBase {</span>
+    mInstance = Room.databaseBuilder(
+        context.applicationContext,
+        UserDataBase::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>,
+        <span class="hljs-type">DATABASE_NAME</span></span>
+    ).addMigrations(Migration_1_2)  <span class="hljs-comment">// &#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;</span>
+        .build()
+    <span class="hljs-keyword">return</span> mInstance <span class="hljs-keyword">as</span> UserDataBase
+}
+
+<span class="hljs-comment">// Migration(int startVersion, int endVersion)</span>
+<span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> Migration_1_2</span> = <span class="hljs-keyword">object</span> : Migration(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">migrate</span><span class="hljs-params">(database: <span class="hljs-type">SupportSQLiteDatabase</span>)</span> {</span>
+        database.execSQL(<span class="hljs-string">&quot;alter TABLE User add column nickName TEXT default &apos;123&apos; not null&quot;</span>)
+    }
+}
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5728;<code>@Entity</code>&#x6CE8;&#x91CA;&#x7684;&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@ColumnInfo(name = <span class="hljs-string">&quot;nickName&quot;</span>, typeAffinity = ColumnInfo.TEXT)
+<span class="hljs-variable"><span class="hljs-keyword">var</span> nickname</span> = <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C06;&#x4E4B;&#x524D;&#x7684;<code>@Database</code>&#x6CE8;&#x91CA;&#x7684;&#x7248;&#x672C;&#x6539;&#x4E3A;&#x76EE;&#x6807;&#x7248;&#x672C;<code>2</code>&#xFF1A;</p>
+<pre><code class="lang-kotlin">@Database(entities = arrayOf(User::<span class="hljs-class"><span class="hljs-keyword">class</span>), <span class="hljs-type">version = 2</span>, <span class="hljs-type">exportSchema = false)</span></span>
+abstract <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserDataBase</span> : <span class="hljs-type">RoomDatabase</span></span>()
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E0B;&#x6570;&#x636E;&#x5E93;&#xFF1A;
+<img src="images/screenshot_1650523384778.png" alt="">
+&#x6570;&#x636E;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x8868;&#xFF1A;
+<img src="images/screenshot_1650523401532.png" alt=""></p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4ECE;&#x7248;&#x672C;<code>1</code>&#x5347;&#x7EA7;&#x5230;&#x7248;&#x672C;<code>3</code>&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x5E94;&#x7684;&#x5B9A;&#x4E49;:</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> Migration_1_2</span> = <span class="hljs-keyword">object</span> : Migration(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> Migration_2_3</span> = <span class="hljs-keyword">object</span> : Migration(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x5728;&#x8868;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x597D;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-kotlin">mInstance = Room.databaseBuilder(
+        context.applicationContext,
+        UserDataBase::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>,
+        <span class="hljs-type">DATABASE_NAME</span></span>
+    ).addMigrations(Migration_1_2, Migration_2_3)  <span class="hljs-comment">// &#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;</span>
+        .build()
+</code></pre>
+<h2 id="32-&#x5F02;&#x5E38;&#x5347;&#x7EA7;">3.2 &#x5F02;&#x5E38;&#x5347;&#x7EA7;</h2>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="https://developer.android.google.cn/training/data-storage/room/migrating-db-versions?hl=zh_cn#manual" target="_blank">&#x624B;&#x52A8;&#x8FC1;&#x79FB;</a>
+&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x6572;&#x9519;&#x4E86;&#xFF0C;&#x5728;<code>@Database</code>&#x6CE8;&#x89E3;&#x7684;&#x53C2;&#x6570;&#x4E2D;&#x6307;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x7684;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x3002;&#x6BD4;&#x5982;&#x6B64;&#x65F6;&#x6211;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x5199;2&#x5230;3&#x7248;&#x672C;&#x7684;&#x5347;&#x7EA7;<code>Migration</code>&#x548C;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;<code>3</code>&#x540E;&#x7A0B;&#x5E8F;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x62A5;&#x9519;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p>Caused by: java.lang.IllegalStateException: A migration from 2 to 3 was required but not found. Please provide the necessary Migration path via RoomDatabase.Builder.addMigration(Migration ...) or allow for destructive migrations via one of the RoomDatabase.Builder.fallbackToDestructiveMigration* methods.</p>
+</blockquote>
+<p>&#x6839;&#x636E;&#x63D0;&#x793A;&#x8BF4;&#x660E;&#xFF0C;&#x77E5;&#x9053;&#x8981;&#x4E48;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<code>Migration</code>&#x6765;&#x6307;&#x5B9A;&#x6DFB;&#x52A0;&#x7684;&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x8981;&#x4E48;&#x6307;&#x5B9A;<code>fallbackToDestructiveMigration</code>&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x91CC;&#x5C31;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>fallbackToDestructiveMigration</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5373;&#xFF1A;</p>
+<pre><code class="lang-kotlin">mInstance = Room.databaseBuilder(
+    context.applicationContext,
+    UserDataBase::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>,
+    <span class="hljs-type">DATABASE_NAME</span></span>
+).addMigrations(Migration_1_2)  <span class="hljs-comment">// &#x6570;&#x636E;&#x5E93;&#x7248;&#x672C;&#x5347;&#x7EA7;</span>
+    .fallbackToDestructiveMigration()
+    .build()
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6237;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5747;&#x4F1A;&#x6E05;&#x7A7A;&#xFF08;&#x7834;&#x574F;&#x6027;&#x5730;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#xFF0C;<code>Room</code> &#x5728;&#x5C1D;&#x8BD5;&#x6267;&#x884C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x8FC1;&#x79FB;&#x8DEF;&#x5F84;&#x7684;&#x8FC1;&#x79FB;&#x65F6;&#x4F1A;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;<strong>&#x6C38;&#x4E45;&#x5220;&#x9664;&#x6240;&#x6709;&#x6570;&#x636E;</strong>&#xFF09;&#x3002;</p>
+<h2 id="33-scheme&#x6587;&#x4EF6;">3.3 Scheme&#x6587;&#x4EF6;</h2>
+<p>&#x518D;&#x6B21;&#x56DE;&#x987E;&#x4E00;&#x4E0B;<code>@Database</code>&#x7684;&#x6CE8;&#x89E3;&#xFF1A;</p>
+<pre><code>@Database(entities = arrayOf(User::class), version = 3, exportSchema = false)
+abstract class UserDataBase : RoomDatabase()
+</code></pre><p>&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;<code>exportSchema</code>&#x6307;&#x5B9A;&#x4E3A;<code>false</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x9700;&#x8981;<code>Schema</code>&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#xFF0C;&#x7136;&#x540E;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x4E00;&#x4E0B;&#x751F;&#x6210;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code class="lang-groovy">android {
+    ...
+    defaultConfig {
+        ...
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [<span class="hljs-string">&quot;room.schemaLocation&quot;</span>: <span class="hljs-string">&quot;$projectDir/schemas&quot;</span>.toString()]
+            }
+        }
+    }
+}
+</code></pre>
+<p>&#x5728;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x751F;&#x6210;&#x7684;<code>json</code>&#x6587;&#x4EF6;&#xFF1A;
+<img src="images/screenshot_1650529237333.png" alt=""></p>
+<p>&#x5BFC;&#x51FA;&#x7684; <code>JSON</code> &#x6587;&#x4EF6;&#x4EE3;&#x8868;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67B6;&#x6784;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x3002;&#x60A8;&#x5E94;&#x5C06;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x5728;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x6B64;&#x7CFB;&#x7EDF;&#x5141;&#x8BB8;<code>Room</code> &#x51FA;&#x4E8E;&#x6D4B;&#x8BD5;&#x76EE;&#x7684;&#x521B;&#x5EFA;&#x8F83;&#x65E7;&#x7248;&#x672C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x68A6;&#x5426; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-26 18:31:38
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="数据绑定.html" class="navigation navigation-prev " aria-label="Previous page: 数据绑定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Livedata.html" class="navigation navigation-next " aria-label="Next page: 【Android Jetpack】Livedata">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"【Android Jetpack】Room——基本使用","level":"1.6","depth":1,"next":{"title":"【Android Jetpack】Livedata","level":"1.7","depth":1,"path":"Livedata.md","ref":"Livedata.md","articles":[]},"previous":{"title":"数据绑定","level":"1.5","depth":1,"path":"数据绑定.md","ref":"数据绑定.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","popup","splitter","code","chapter-fold","tbfed-pagefooter","splitter","theme-comscore","github-buttons"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 梦否 2022","modify_label":"最后更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"github-buttons":{"repo":"zhangjikai/gitbook-use","types":["star","watch","fork"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"梦否","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jetpack","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://mengfou.blog.csdn.net/","我的Github":"https://github.com/baiyazi"}},"gitbook":"*","description":"This is such a great book!","direction":"rtl"},"file":{"path":"【AndroidJetpack】Room.md","mtime":"2022-04-26T10:31:38.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-27T07:15:12.546Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
