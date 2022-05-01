@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.weizu.deeplink.fragments.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.weizu.deeplink.fragments.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_BFragment_to_CFragment"
+            app:destination="@id/CFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CFragment"
+        android:name="com.weizu.deeplink.fragments.CFragment"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c">
+        <deepLink app:uri="https://github.com/baiyazi/"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">navi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Home fragment</string>
+    <string name="login_fragment">Login fragment</string>
+    <string name="register_fragment">Detail fragment</string>
+    <string name="input_hine">请输入用户名</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+</resources>
