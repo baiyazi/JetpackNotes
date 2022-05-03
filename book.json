@@ -22,7 +22,9 @@
     "tbfed-pagefooter",
     "splitter",
     "theme-comscore",
-    "github-buttons"
+    "edit-link-plus",
+    "github-buttons",
+    "expandable-chapters-small"
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {
@@ -37,6 +39,9 @@
       "repo": "zhangjikai/gitbook-use",
       "types": ["star", "watch", "fork"],
       "size": "small"
+    },
+    "edit-link-plus": {
+      "base": "https://github.com/baiyazi/JetpackNotes/blob/main/"
     }
   },
   "links": {
